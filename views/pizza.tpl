@@ -12,10 +12,10 @@
         <fieldset>
             <legend>Pizzu Pöntun</legend>
             <h2>Upplýsingar um notandann</h2>
-            Nafnið: <input name='nafn'><br>
-            Heimilisfang: <input name='heimilisfang'><br>
-            Netfang: <input name="netfang" type="email"><br>
-            Símanúmer: <input name="simanumer" type="tel" pattern="[0-9]{7}"><br>
+            Nafnið: <input required name='nafn'><br>
+            Heimilisfang: <input required name='heimilisfang'><br>
+            Netfang: <input required name="netfang" type="email"><br>
+            Símanúmer: <input required name="simanumer" type="tel" pattern="[0-9]{7}"><br>
 
             <h2>Pizzastærð</h2>
             <p>Hvaða stærð má bjóða þér?</p>

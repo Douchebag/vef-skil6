@@ -29,11 +29,24 @@ def order():
 
 @route("/nyskra")
 def signup():
+
     return template('nyskra.tpl')
+
+@route("/nyskradur")
+def signedup():
+
+    nafn = request.query.nafn
+    lykilord = request.query.lykilord
+    netfang = request.query.netfang
+
+    return template('nyskradur.tpl', nafn=nafn, lykilord=lykilord, netfang=netfang)
+
+@route("/static/<filename>")
+def server_static(filename):
+    return static_file(filename, root='./files')
 
 @error(404)
 def error404(error):
     return "<h1>Þessi síða fannst ekki</h1><br><a href='/'>Heim</a>"
 
-run()
-#run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
